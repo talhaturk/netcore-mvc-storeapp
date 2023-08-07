@@ -1,0 +1,14 @@
+@model IQueryable<Product>
+
+@section Footer{
+    <div>
+        Only for Index Footer
+    </div>
+}
+
+<div class="row my-3">
+    @foreach (Entities.Models.Product prd in Model)
+    {
+        <partial name="_ProductCard" model="@prd" />    
+    }
+</div>
