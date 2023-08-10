@@ -9,7 +9,7 @@
 
             <img src="@Model?.ImageUrl" alt="@Model?.ProductName" class="img-fluid shadow rounded-3 my-3">
 
-            <p class="lead text-danger">@Model.Price.ToString("c")</p>
+            <p class="lead text-danger">@Model.Price.ToString("c", new System.Globalization.CultureInfo("tr-TR"))</p>
         </div>
     </div>
 </div>
