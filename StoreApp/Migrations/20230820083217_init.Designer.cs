@@ -11,8 +11,8 @@ using Repositories;
 namespace StoreApp.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20230819170445_start")]
-    partial class start
+    [Migration("20230820083217_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -126,6 +126,9 @@ namespace StoreApp.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("ShowCase")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Summary")
                         .HasColumnType("TEXT");
 
@@ -143,6 +146,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/desktop.jpg",
                             Price = 17000m,
                             ProductName = "Computer",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -152,6 +156,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/keyboard.jpg",
                             Price = 1000m,
                             ProductName = "Keyboard",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -161,6 +166,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/mouse.jpg",
                             Price = 500m,
                             ProductName = "Mouse",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -170,6 +176,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/monitor.jpg",
                             Price = 7000m,
                             ProductName = "Monitor",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -179,6 +186,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/headset.jpg",
                             Price = 1500m,
                             ProductName = "Headset",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -188,6 +196,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/history.jpg",
                             Price = 50m,
                             ProductName = "History",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -197,6 +206,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/hamlet.jpg",
                             Price = 80m,
                             ProductName = "Hamlet",
+                            ShowCase = true,
                             Summary = ""
                         });
                 });
